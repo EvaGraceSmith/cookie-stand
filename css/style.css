@@ -1,5 +1,7 @@
 /* Color Palette
 Base color: Salmon fa8072;
+Medium Salmon: rgb(253, 176, 167);
+Light Salmon:  FFC9C3;
 Complementary Color: Green- GB [hex]	56BD6D;
 Quad Apricot:  FAB472;
 Quad  Dusty Blue:  488D9A; 
@@ -10,7 +12,7 @@ Whitesmoke:  whitesmoke;
 
 
 body {
-    background-color: salmon;
+    background-color: rgb(253, 176, 167);
     color: rgb(73, 56, 54);
     color:whitesmoke;
     
