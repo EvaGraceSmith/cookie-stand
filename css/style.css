@@ -1,3 +1,17 @@
+/* Color Palate
+Base color: Salmon fa8072;
+Complementary Color: Green- GB [hex]	56BD6D;
+Quad Apricot:  FAB472;
+Quad  Dusty Blue:  488D9A; 
+Light Gray:  rgb(205, 199, 198);
+Dark Gray :  rgb(73, 56, 54);
+Whitesmoke:  whitesmoke;
+*/
+
+
 body {
     background-color: salmon;
+    color: rgb(73, 56, 54);
+    color:whitesmoke;
+    
 }
