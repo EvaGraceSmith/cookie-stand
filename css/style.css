@@ -13,11 +13,13 @@ dark Dusty Blue: #196371;
 Light Gray:  rgb(205, 199, 198);
 Dark Gray :  rgb(73, 56, 54);
 Whitesmoke:  whitesmoke;
+font-family: 'Coiny', cursive;
+font-family: 'Josefin Sans', sans-serif;
 */
 
 
 body {
-    background-color: #FAB472;
+    background-color: #FFC9C3;
     color:whitesmoke;
     color: #D95648;
     color: #92541b;
@@ -31,5 +33,12 @@ body {
 
 h1, h2, h3{
     color: #196371;
+}
 
+
+
+ul  {
+
+    list-style-type: circle; 
+    color: #a03a2f
 }
