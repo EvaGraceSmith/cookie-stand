@@ -92,13 +92,21 @@ footer {
 .sales {
     color: #a03a2f; 
 }
-.sales-data  {
+#salesData  {
 list-style:disc;
     list-style-type: circle; 
     color: #a03a2f;
     list-style-position: inside;
 
 }
+
+table, td, th {
+    background-color: #ffebe9;
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 10px;
+  }
+  
 
 
 /* *********************************Global Styles****************************** */
