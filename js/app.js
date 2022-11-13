@@ -151,7 +151,10 @@ function displayData(location, id){
   //grab parent element = the <ul>
   let parentElement = document.getElementById(id);
   console.log(parentElement);
+  let h2 = document.createElement ('h2');
+  h2.textContent = id;
 
+  parentElement.appendChild (h2);
 
   let cookieTotal=0;
 
@@ -162,7 +165,7 @@ function displayData(location, id){
 
     console.log({cookieForThisHour, cookieTotal});
 
-    let listString = hours [i] + ' :' + cookieForThisHour + 'cookies';
+    let listString = hours [i] + ': ' + cookieForThisHour + ' cookies';
     console.log (listString);
 
     let li = document.createElement ('li');
@@ -172,15 +175,15 @@ function displayData(location, id){
   }
 
   let totalLi = document.createElement ('li');
-  totalLi.textContent = cookieTotal;
+  totalLi.textContent = 'Total Cookies: ' + cookieTotal;
   parentElement.appendChild(totalLi);
 
 }
 
 
 
-displayData(locSeattle, 'seattle');
-displayData(locTokyo, 'tokyo');
-displayData(locDubai, 'dubai');
-displayData(locParis, 'paris');
-displayData(locLima, 'lima');
+displayData(locSeattle, 'Seattle');
+displayData(locTokyo, 'Tokyo');
+displayData(locDubai, 'Dubai');
+displayData(locParis, 'Paris');
+displayData(locLima, 'Lima');
