@@ -17,19 +17,61 @@ font-family: 'Coiny', cursive;
 font-family: 'Josefin Sans', sans-serif;
 */
 
-
+/* *********************************Global Styles****************************** */
 body {
     background-color: #FFC9C3;
-    color:whitesmoke;
-    color: #D95648;
-    color: #92541b;
-    color: #196371;
-    color: rgb(73, 56, 54);
+
+}
+header {
+    background: #488D9A;
+height: 150px;
+color: whitesmoke;
+
+}
+.navigation-bar {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    font-family: 'Josefin Sans', sans-serif;
+    hover: 
+    
+
+  }
+  
+.navigation-bar a {
+    padding: 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: right;
+  }
+
+  .logo-words{
+position: absolute;
+padding-top: -30px;
+
+
+  }
+
+  .logo {
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 30px;
+    font-family: 'Coiny', cursive;
+  }
+
+  img {
+    height: 50px;
+    padding-left: 80px;
+    padding-top: 5px;
+  }
+
+main {
+    height: 600px;
 }
 
-.sales {
-    color: #a03a2f; 
-}
 
 h1, h2, h3{
     color: #196371;
@@ -37,8 +79,31 @@ h1, h2, h3{
 
 
 
-ul  {
-
-    list-style-type: circle; 
-    color: #a03a2f
+footer {
+    background: #488D9A;
+    height: 150px;
+    color: whitesmoke;
 }
+/* *********************************index.HTML****************************** */
+
+
+
+/* *********************************Sales.HTML****************************** */
+.sales {
+    color: #a03a2f; 
+}
+.sales-data  {
+list-style:disc;
+    list-style-type: circle; 
+    color: #a03a2f;
+    list-style-position: inside;
+
+}
+
+
+/* *********************************Global Styles****************************** */
+
+
+
+
+/* *********************************Global Styles****************************** */
