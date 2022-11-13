@@ -47,6 +47,13 @@ color: whitesmoke;
     text-align: right;
   }
 
+  .logo-words{
+position: absolute;
+padding-top: -30px;
+
+
+  }
+
   .logo {
     color: whitesmoke;
     font-size: 30px;
@@ -86,7 +93,7 @@ footer {
     color: #a03a2f; 
 }
 .sales-data  {
-
+list-style:disc;
     list-style-type: circle; 
     color: #a03a2f;
     list-style-position: inside;
