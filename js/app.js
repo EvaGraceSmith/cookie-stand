@@ -4,15 +4,6 @@ console.log ('Hello from the js file');
 
 
 
-
-
-
-
-
-
-
-
-
 let hours =['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 // Replace all of your object literals for the salmon cookie stand with a single constructor function that,
@@ -24,7 +15,6 @@ function StoreLocation (location, min, max, avgCookies) {
   this.maxCustomersPerHour = max;
   this.avgCookiesPerSale = avgCookies;
   this.hourlyArray = [];
-  this.cookiesPerHourArray = [];
   this.cookieTotal=0;
 }
 
@@ -77,15 +67,6 @@ StoreLocation.prototype.renderTableData = function () {
   table.appendChild(row);
 };
 
-StoreLocation.prototype.dailyLocationTotal = function() {
-  let sumOfCookies = 0;
-  for (let i = 0; i < this.cookiesPerHourArray.length; i++) {
-    sumOfCookies = this.cookiesPerHourArray[i] + sumOfCookies;
-  }
-  return sumOfCookies;
-};
-
-
 
 // Display each stores data in a table format similar to what is below.
 //Create Table head
@@ -119,19 +100,16 @@ function renderTableFooter () {
   tableFootCell.textContent = 'Totals';
   row.appendChild(tableFootCell);
 
-  let cookieTotalArray = [];
   // to look at 14 hours of the day for 14 totals cells
   for (let i = 0; i < hoursOfDay; i++) {
     let cookieRowTotal = 0;
     // add up each index from all locations
     for (let j = 0; j < locationInfo.length; j++) {
-      cookieRowTotal = cookieRowTotal + locationInfo[j].cookieTotal[i];
-      console.log(cookieRowTotal);
+      cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
     }
-    cookieTotalArray.push(cookieRowTotal);
+
     tableFootCell = document.createElement('td');
     tableFootCell.textContent = cookieRowTotal;
-    console.log('cookieRowTotal' + cookieRowTotal);
     row.appendChild(tableFootCell);
   }
 
