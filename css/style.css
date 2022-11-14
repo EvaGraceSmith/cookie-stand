@@ -13,8 +13,10 @@ dark Dusty Blue: #196371;
 Light Gray:  rgb(205, 199, 198);
 Dark Gray :  rgb(73, 56, 54);
 Whitesmoke:  whitesmoke;
-font-family: 'Coiny', cursive;
+font-family: 'Chicle', cursive;
+font-family: 'Fascinate', cursive;
 font-family: 'Josefin Sans', sans-serif;
+font-family: 'Molle', cursive;
 */
 
 /* *********************************Global Styles****************************** */
@@ -53,15 +55,16 @@ padding-top: -30px;
 
   .logo {
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 35px;
     text-align: left;
+    margin-top: -10px;
     padding-left: 30px;
-    font-family: 'Coiny', cursive;
+    font-family: 'Chicle', cursive;
   }
 
   img {
     height: 50px;
-    padding-left: 80px;
+    padding-left: 50px;
     padding-top: 5px;
   }
 
@@ -87,6 +90,7 @@ footer {
 
 /* *********************************Sales.HTML****************************** */
 .sales {
+    background-color: salmon;
     color: #a03a2f; 
 }
 #salesData  {
