@@ -68,7 +68,7 @@ padding-top: -30px;
   }
 
 main {
-    height: 600px;
+    height: 800px;
 }
 
 h1, h2, h3{
@@ -84,7 +84,12 @@ footer {
 }
 /* *********************************index.HTML****************************** */
 
+.intro {
+ background-image: url("../img/mockaroon-bzLhhI3MpYY-unsplash.jpg");
+ background-size: cover;
+ height: 600px;
 
+}
 
 /* *********************************Sales.HTML****************************** */
 .sales {
