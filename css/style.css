@@ -14,7 +14,6 @@ Light Gray:  rgb(205, 199, 198);
 Dark Gray :  rgb(73, 56, 54);
 Whitesmoke:  whitesmoke;
 font-family: 'Chicle', cursive;
-font-family: 'Fascinate', cursive;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Molle', cursive;
 */
@@ -55,23 +54,22 @@ padding-top: -30px;
 
   .logo {
     color: whitesmoke;
-    font-size: 35px;
+    font-size: 40px;
     text-align: left;
     margin-top: -10px;
     padding-left: 30px;
     font-family: 'Chicle', cursive;
   }
 
-  img {
+  .salmon {
     height: 50px;
-    padding-left: 50px;
+    padding-left: 61px;
     padding-top: 5px;
   }
 
 main {
     height: 600px;
 }
-
 
 h1, h2, h3{
     color: #196371;
