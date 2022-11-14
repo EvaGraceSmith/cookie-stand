@@ -13,8 +13,9 @@ dark Dusty Blue: #196371;
 Light Gray:  rgb(205, 199, 198);
 Dark Gray :  rgb(73, 56, 54);
 Whitesmoke:  whitesmoke;
-font-family: 'Coiny', cursive;
+font-family: 'Chicle', cursive;
 font-family: 'Josefin Sans', sans-serif;
+font-family: 'Molle', cursive;
 */
 
 /* *********************************Global Styles****************************** */
@@ -59,7 +60,7 @@ padding-top: -30px;
     font-size: 30px;
     text-align: left;
     padding-left: 30px;
-    font-family: 'Coiny', cursive;
+    font-family: 'Chicle', cursive;
   }
 
   img {
