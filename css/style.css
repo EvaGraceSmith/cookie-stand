@@ -36,9 +36,6 @@ color: whitesmoke;
     justify-content: right;
     text-align: right;
     font-family: 'Josefin Sans', sans-serif;
-    hover: 
-    
-
   }
   
 .navigation-bar a {
@@ -91,6 +88,7 @@ footer {
 
 /* *********************************Sales.HTML****************************** */
 .sales {
+    background-color: salmon;
     color: #a03a2f; 
 }
 #salesData  {
