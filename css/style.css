@@ -243,25 +243,25 @@ list-style:disc;
     list-style-position: inside;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     margin-left: 100px;
-    border: solid #fa8072; 2px;
+    border: solid #fa8072 2px;
     border-radius: 10px;
     margin-top: 30px;
     font-family: 'Josefin Sans', sans-serif;
   
-
-
 }
 
-table, td, th {
-    background-color: #ffebe9;
-    border: solid #fa8072; 2px;
-    border-collapse: collapse;
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 100px;
+  background-color: #ffebe9;
+}
+
+th, td {
     padding: 10px;
     text-align: center;
-  }
-table {
-    margin-left: 100px;
-  }  
+    border: 2px solid #fa8072;
+}
   tr:hover    {background-color: coral;}
 
 /* *********************************Global Styles****************************** */
