@@ -185,6 +185,7 @@ padding-top: 20px;
 }
 .our-family {
   flex: 1 480px;
+  border-radius: 10px;
 }
 
 article:nth-of-type(2) {
@@ -198,6 +199,7 @@ article:nth-of-type(2) {
   width: 480 px;
   height: 190px;
   border:1px solid rgb(11, 11, 11);
+  border-radius: 10px;
   padding: 5px;
   background-color: #ffebe9;
 
@@ -216,6 +218,7 @@ button {
   margin-top: 15px;
   font-size: 18px;
   line-height: 1.5;
+  border-radius: 10px;
 }
 button:hover {
   background-color: rgb(36, 128, 133);
