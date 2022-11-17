@@ -241,6 +241,11 @@ list-style:disc;
     list-style-type: circle; 
     color: #a03a2f;
     list-style-position: inside;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: 100px;
+    border: solid #fa8072; 2px;
+    border-radius: 10px;
+
 
 }
 
