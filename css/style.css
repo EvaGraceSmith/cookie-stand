@@ -20,7 +20,7 @@ font-family: 'Molle', cursive;
 
 /* *********************************Global Styles****************************** */
 body {
-    background-color: #FFC9C3;
+    background-color: whitesmoke;
 
 }
 header {
@@ -142,15 +142,18 @@ color: #196371;
 .scroll{
   overflow-y:scroll;
   width: 480 px;
-  height: 250px;
+  height: 300px;
   border:1px solid #196371;
   box-shadow: 0 3px 10px #196371;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   background-color: #ffebe9;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.5;
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
   margin-bottom: 100px;
 
 }
@@ -286,6 +289,11 @@ footer>p {
 
 
 /* *********************************Sales.HTML****************************** */
+.sales-page{
+  height: 600px;
+}
+
+
 .sales {
     background-color: salmon;
     color: #a03a2f; 
