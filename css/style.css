@@ -49,9 +49,14 @@ color: whitesmoke;
   .logo-words{
 position: absolute;
 padding-top: -30px;
-
-
   }
+
+  .content-wrap {
+    max-width: 1000px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    }
 
   .logo {
     color: whitesmoke;
@@ -69,7 +74,8 @@ padding-top: -30px;
   }
 
 main {
-    height: 1600px;
+    /* height: 2000px; */
+    background-color: white;
 }
 
 h1, h2, h3{
@@ -227,8 +233,56 @@ button:hover {
 }
 
 /* ******************locations**************** */
+/* .locations {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Josefin Sans', sans-serif;
+  width: 70%;
+  max-width: 960px;
+  margin: 20px auto;
+}
+
+.locations >article{
+  margin: 20px;
+  background-color:#c2e6ed;
+  padding: 10px;
+  flex: 1;
+} */
 
 
+.store-info{
+  height: 600px;
+  background-color: #196371;
+}
+
+/* Add your flexbox CSS below here */
+
+.locations {
+  display: flex;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.5;
+  height: 200px;
+  /* width: 70%; */
+  max-width: 960px;
+  /* align-items: center; */
+  justify-content:center;
+  /* border: 1px solid #2d2d2d; */
+
+}
+.locations >article {
+  padding: 10px;
+  margin: 10px;
+  padding-left: 20px;
+  background-color:#c2e6ed;
+  flex: 1;
+  
+}
+
+h2 {
+  font-size: 20px;
+}
 
 
 /* *********************************Sales.HTML****************************** */
@@ -262,7 +316,7 @@ th, td {
     text-align: center;
     border: 2px solid #fa8072;
 }
-  tr:hover    {background-color: coral;}
+  tr:hover    {background-color: #FFA49A;}
 
 /* *********************************Global Styles****************************** */
 
