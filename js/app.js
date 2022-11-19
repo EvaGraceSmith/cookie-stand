@@ -151,4 +151,55 @@ for (let i=0; i<locationInfo.length; i++){
 }
 renderTableFooter();
 
+//add an event listener
 
+// create function to handle event
+function handleForm(event){
+  event.preventDefault();
+
+
+  let locationElement = document.getElementById('location');
+  let locationValue = locationElement['value'];
+
+  let minCustomersPerHourElement = document.getElementById('minCustomersPerHour');
+  let minCustomersPerHourValue = minCustomersPerHourElement['value'];
+
+  let maxCustomersPerHourElement = document.getElementById('maxCustomersPerHour');
+  let maxCustomersPerHourValue = maxCustomersPerHourElement['value'];
+
+  let avgCookiesPerSaleElement = document.getElementById('avgCookiesPerSale');
+  let avgCookiesPerSaleValue = avgCookiesPerSaleElement['value'];
+
+
+  console.log(locationValue, minCustomersPerHourValue, maxCustomersPerHourValue, avgCookiesPerSaleValue);
+  //id = name from html
+
+
+  // **************testing**************
+  // use our constructor
+  let newLocation= new StoreLocation(locationValue, minCustomersPerHourValue, maxCustomersPerHourValue, avgCookiesPerSaleValue);
+  console.log(newLocation);
+  // adding new location to our list of locations:
+  locationInfo.push(newLocation);
+  console.log(locationInfo.length);
+
+  // re-render (update) the table with new info
+  let newLength=locationInfo.length-1;
+
+  locationInfo[newLength].generateCookiesPerHour();
+  locationInfo[newLength].cookiePurchased();
+  locationInfo[newLength].renderTableData();
+
+  renderTableFooter();
+
+  //  ************testing**************
+
+  //make sure form clear out and resets on submit.
+
+}
+//1. get our element
+let locationForm = document.getElementById('new-location');
+console.log('new-location:', locationForm);
+//2. which event am I listening for 'submit'
+//3. code do I run when i hear the event.  Create function to handle the form submission.
+locationForm.addEventListener('submit', handleForm);
