@@ -1,7 +1,8 @@
 'use strict';
 console.log ('Hello from the js file');
 
-
+//global variable
+StoreLocation.allStoreLocation=[];
 
 
 let hours =['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
@@ -16,6 +17,7 @@ function StoreLocation (location, min, max, avgCookies) {
   this.avgCookiesPerSale = avgCookies;
   this.hourlyArray = [];
   this.cookieTotal=0;
+  StoreLocation.allStoreLocation.push(this);
 }
 
 
@@ -63,7 +65,6 @@ StoreLocation.prototype.renderTableData = function () {
   tableDataCell = document.createElement('td');
   tableDataCell.textContent = this.cookieTotal;
   row.appendChild(tableDataCell);
-
   table.appendChild(row);
 };
 
@@ -95,6 +96,7 @@ renderTableHeaders();
 function renderTableFooter () {
   let table = document.getElementById('salesData');
   let row = document.createElement('tr');
+  let footer = document.getElementsByTagName('tfoot');
   let tableFootCell = document.createElement('th');
   let hoursOfDay = hours.length;
   tableFootCell.textContent = 'Totals';
@@ -175,26 +177,40 @@ function handleForm(event){
   //id = name from html
 
 
-  // **************testing**************
   // use our constructor
+  //create the new location
   let newLocation= new StoreLocation(locationValue, minCustomersPerHourValue, maxCustomersPerHourValue, avgCookiesPerSaleValue);
-  console.log(newLocation);
-  // adding new location to our list of locations:
-  locationInfo.push(newLocation);
-  console.log(locationInfo.length);
+  newLocation.generateCookiesPerHour();
+  newLocation.cookiePurchased();
+  newLocation.renderTableData();
 
-  // re-render (update) the table with new info
-  let newLength=locationInfo.length-1;
+ 
+ 
+ 
+   // **************testing**************
+  // console.log(newLocation);
+  // // adding new location to our list of locations:
+  // locationInfo.push(newLocation);
+  // console.log(locationInfo.length);
 
-  locationInfo[newLength].generateCookiesPerHour();
-  locationInfo[newLength].cookiePurchased();
-  locationInfo[newLength].renderTableData();
+  // // re-render (update) the table with new info
+  // let newLength=locationInfo.length-1;
 
-  renderTableFooter();
+  // locationInfo[newLength].generateCookiesPerHour();
+  // locationInfo[newLength].cookiePurchased();
+  // locationInfo[newLength].renderTableData();
 
-  //  ************testing**************
+  // renderTableFooter();
+//  ************testing**************
+
+
+
+
+  
 
   //make sure form clear out and resets on submit.
+  let locationForm=document.getElementById('new-location');
+  locationForm.reset();
 
 }
 //1. get our element

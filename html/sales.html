@@ -31,46 +31,48 @@
         <!-- <p>This is the sales sheet</p> -->
 
 
-        <section class="form">
+<section class="form content-wrap">
 
 
+    <h2>New Store Location Info</h2>
 
+    <form id="new-location">
+        <fieldset>
+            <legend>Add new location to the table!</legend>
+              <label for="name">location:</label>
+             <input type="text" id="location" required>
+             <label for="minCustomersPerHour">minCustomersPerHour:</label>
+             <input type="text" id="minCustomersPerHour" required>
+             <label for="maxCustomersPerHour">maxCustomersPerHour:</label>
+             <input type="text" id="maxCustomersPerHour" required>
+             <label for="avgCookiesPerSale" >avgCookiesPerSale: </label>
+             <input type="text" id="avgCookiesPerSale" required>
 
-
-<h2>New Store Location Info</h2>
-
-<form id="new-location">
-    <fieldset>
-        <legend>Add new location to the table!</legend>
-        <label for="name">location:</label>
-        <input type="text" id="location" required>
-        <label for="minCustomersPerHour">minCustomersPerHour:</label>
-        <input type="text" id="minCustomersPerHour" required>
-        <label for="maxCustomersPerHour">maxCustomersPerHour:</label>
-        <input type="text" id="maxCustomersPerHour" required>
-        <label for="avgCookiesPerSale" >avgCookiesPerSale: </label>
-        <input type="text" id="avgCookiesPerSale" required>
-
-    </fieldset>
+        </fieldset>
 
           <div>
             <button type="reset">Reset Form!</button>
             <button id="submit">Submit New Location!</button>
           </div>
-        </form>
+    </form>
 
 
         <!-- Display the lists on sales.html.  -->
-    </section>
-
-<section id="salesData">
-<!-- <ul id="Seattle"></ul>
-<ul id="Tokyo"></ul>
-<ul id="Dubai"></ul>
-<ul id="Paris"></ul>
-<ul id="Lima"></ul> -->
 </section>
+<div id="table">
+<table id="salesData">
+    <thead>
 
+    </thead>
+    <tbody>
+
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
+</section>
+</div>
 
 </main>
 <footer>
