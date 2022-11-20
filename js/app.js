@@ -164,13 +164,13 @@ function handleForm(event){
   let locationValue = locationElement['value'];
 
   let minCustomersPerHourElement = document.getElementById('minCustomersPerHour');
-  let minCustomersPerHourValue = minCustomersPerHourElement['value'];
+  let minCustomersPerHourValue = Number(minCustomersPerHourElement['value']);
 
   let maxCustomersPerHourElement = document.getElementById('maxCustomersPerHour');
-  let maxCustomersPerHourValue = maxCustomersPerHourElement['value'];
+  let maxCustomersPerHourValue = Number(maxCustomersPerHourElement['value']);
 
   let avgCookiesPerSaleElement = document.getElementById('avgCookiesPerSale');
-  let avgCookiesPerSaleValue = avgCookiesPerSaleElement['value'];
+  let avgCookiesPerSaleValue = Number(avgCookiesPerSaleElement['value']);
 
 
   console.log(locationValue, minCustomersPerHourValue, maxCustomersPerHourValue, avgCookiesPerSaleValue);
@@ -179,15 +179,14 @@ function handleForm(event){
 
   // use our constructor
   //create the new location
+  let OldtableTableFooter = document.getElementById('footer');
+  OldtableTableFooter.remove();
   let newLocation= new StoreLocation(locationValue, minCustomersPerHourValue, maxCustomersPerHourValue, avgCookiesPerSaleValue);
   newLocation.generateCookiesPerHour();
   newLocation.cookiePurchased();
   newLocation.renderTableData();
 
- 
- 
- 
-   // **************testing**************
+  // **************testing**************
   // console.log(newLocation);
   // // adding new location to our list of locations:
   // locationInfo.push(newLocation);
@@ -200,7 +199,7 @@ function handleForm(event){
   // locationInfo[newLength].cookiePurchased();
   // locationInfo[newLength].renderTableData();
 
-  // renderTableFooter();
+  renderTableFooter();
 //  ************testing**************
 
 
