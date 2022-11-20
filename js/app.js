@@ -41,10 +41,6 @@ StoreLocation.prototype.cookiePurchased= function (){
   }
 };
 
-
-
-
-
 StoreLocation.prototype.renderTableData = function () {
   let table = document.getElementById('salesData');
   let row = document.createElement('tr');
@@ -96,7 +92,6 @@ renderTableHeaders();
 function renderTableFooter () {
   let table = document.getElementById('salesData');
   let row = document.createElement('tr');
-  let footer = document.getElementsByTagName('tfoot');
   let tableFootCell = document.createElement('th');
   let hoursOfDay = hours.length;
   tableFootCell.textContent = 'Totals';
@@ -105,63 +100,39 @@ function renderTableFooter () {
   // to look at 14 hours of the day for 14 totals cells
   for (let i = 0; i < hoursOfDay; i++) {
     let cookieRowTotal = 0;
-    // add up each index from all locations
+    // add up cookies from all locations
     for (let j = 0; j < locationInfo.length; j++) {
       cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
     }
-
+    //creates footer cells
     tableFootCell = document.createElement('td');
     tableFootCell.textContent = cookieRowTotal;
     row.appendChild(tableFootCell);
   }
 
+  //adds all location totals together into bottom right cell:
   let superTotal = 0;
   for (let i = 0; i < locationInfo.length; i++) {
     superTotal = superTotal + locationInfo[i].cookieTotal;
     //console.log(locationInfo[i].cookieTotal);
   }
+  //creates html element
   tableFootCell = document.createElement('td');
   tableFootCell.textContent = superTotal;
   row.appendChild(tableFootCell);
+
+  //named this row in order to update later
   row.id = 'footer';
   table.appendChild(row);
 }
-
-
-
-
-
-
-
-
-// using an array to get info and pass them into constructor
-let seattleInfo=new StoreLocation('Seattle', 23, 65, 6.3);
-let tokyoInfo=new StoreLocation('Tokoyo', 3, 24, 1.2);
-let dubaiInfo=new StoreLocation('Dubai', 11, 38, 3.7);
-let parisInfo=new StoreLocation('Paris', 20, 38, 2.3);
-let limaInfo=new StoreLocation('Lima', 2,16,4.6);
-
-let locationInfo=[seattleInfo,tokyoInfo, dubaiInfo, parisInfo, limaInfo];
-
-// Replace the lists of your data for each store and build a single table of data instead.
-
-for (let i=0; i<locationInfo.length; i++){
-  locationInfo[i].generateCookiesPerHour();
-  locationInfo[i].cookiePurchased();
-  locationInfo[i].renderTableData();
-
-}
-renderTableFooter();
-
-//add an event listener
-
-// create function to handle event
+//  Create function to handle the form submission.
 function handleForm(event){
   event.preventDefault();
 
-
   let locationElement = document.getElementById('location');
   let locationValue = locationElement['value'];
+
+  //IMPORTANT: MAKE SURE THE VALUE INPUTED IN FORM CONVERTS TO A NUMBER:
 
   let minCustomersPerHourElement = document.getElementById('minCustomersPerHour');
   let minCustomersPerHourValue = Number(minCustomersPerHourElement['value']);
@@ -173,48 +144,49 @@ function handleForm(event){
   let avgCookiesPerSaleValue = Number(avgCookiesPerSaleElement['value']);
 
 
-  console.log(locationValue, minCustomersPerHourValue, maxCustomersPerHourValue, avgCookiesPerSaleValue);
-  //id = name from html
 
-
-  // use our constructor
-  //create the new location
+  //remove old totals in footer
   let OldtableTableFooter = document.getElementById('footer');
   OldtableTableFooter.remove();
+
+  //create the new location
+  // use our constructor
   let newLocation= new StoreLocation(locationValue, minCustomersPerHourValue, maxCustomersPerHourValue, avgCookiesPerSaleValue);
+  //update cookies per hour and render new table row
   newLocation.generateCookiesPerHour();
   newLocation.cookiePurchased();
   newLocation.renderTableData();
-
-  // **************testing**************
-  // console.log(newLocation);
-  // // adding new location to our list of locations:
-  // locationInfo.push(newLocation);
-  // console.log(locationInfo.length);
-
-  // // re-render (update) the table with new info
-  // let newLength=locationInfo.length-1;
-
-  // locationInfo[newLength].generateCookiesPerHour();
-  // locationInfo[newLength].cookiePurchased();
-  // locationInfo[newLength].renderTableData();
-
+  //updates table with new totals:
   renderTableFooter();
-//  ************testing**************
 
-
-
-
-  
-
+  // **********Form and Button JS**************
   //make sure form clear out and resets on submit.
   let locationForm=document.getElementById('new-location');
   locationForm.reset();
-
 }
+
+// using an array to get info and pass them into constructor
+let seattleInfo=new StoreLocation('Seattle', 23, 65, 6.3);
+let tokyoInfo=new StoreLocation('Tokoyo', 3, 24, 1.2);
+let dubaiInfo=new StoreLocation('Dubai', 11, 38, 3.7);
+let parisInfo=new StoreLocation('Paris', 20, 38, 2.3);
+let limaInfo=new StoreLocation('Lima', 2,16,4.6);
+
+let locationInfo=[seattleInfo,tokyoInfo, dubaiInfo, parisInfo, limaInfo];
+
+// Replace the lists of your data for each store and build a single table of data instead.
+for (let i=0; i<locationInfo.length; i++){
+  locationInfo[i].generateCookiesPerHour();
+  locationInfo[i].cookiePurchased();
+  locationInfo[i].renderTableData();
+}
+//this renders new information after filling out form
+renderTableFooter();
+
+
 //1. get our element
 let locationForm = document.getElementById('new-location');
 console.log('new-location:', locationForm);
 //2. which event am I listening for 'submit'
-//3. code do I run when i hear the event.  Create function to handle the form submission.
+//add an event listener
 locationForm.addEventListener('submit', handleForm);
