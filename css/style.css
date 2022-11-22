@@ -385,7 +385,7 @@ button:hover {
 }
 
 table {
-  /* border-radius: 30px; */
+  border-radius: 30px;
   border: 5px solid #fa8072 ;
   border-collapse: collapse; 
  
